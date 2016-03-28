@@ -6,6 +6,7 @@ import random, os
 
 os.makedirs("./answers", exist_ok=True)
 os.makedirs("./quizzes", exist_ok=True)
+
 # The quiz data. Keys are states and values are their capitals.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
@@ -50,7 +51,7 @@ for quizNum in range(5):
     wrongAnswers = random.sample(wrongAnswers, 3)
     answerOptions = wrongAnswers + [correctAnswer]
     random.shuffle(answerOptions)
-quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, states[questionNum]))
+    quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, states[questionNum]))
 
   for i in range(4):
     quizFile.write(' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
