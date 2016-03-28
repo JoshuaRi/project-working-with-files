@@ -55,7 +55,8 @@ for questionNum in range(50):
 for i in range(4):
     quizFile.write(' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
     quizFile.write('\n')
-    answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
+    answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'
+    [answerOptions.index(correctAnswer)]))
 quizFile.close()
 answerKeyFile.close()
     
