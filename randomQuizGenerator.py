@@ -4,6 +4,7 @@
 
 import random, os
 
+
 os.makedirs("./answers", exist_ok=True)
 os.makedirs("./quizzes", exist_ok=True)
 
