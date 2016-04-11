@@ -38,7 +38,7 @@ for quizNum in range(5):
     quizFile = open('./quizzes/capitalsquiz%s.txt' % (quizNum + 1), 'w')
     answerKeyFile = open('./answers/capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
     
-    quizFile.write('Name:\nDate:\n\nPeriod:\n\n')
+    quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
     quizFile.write((' ' * 20) + 'State Capitals Quiz (Form %s)' % (quizNum +1))
     quizFile.write('\n\n')
     
@@ -46,7 +46,7 @@ for quizNum in range(5):
     random.shuffle(states)
 
  for questionNum in range(50):
-    correctAnswer = capitals[states[questionNum]]
+    correctAnswers = capitals[states[questionNum]]
     wrongAnswers = list(capitals.values())
     del wrongAnswers[wrongAnswers.index(correctAnswers)]
     wrongAnswers = random.sample(wrongAnswers, 3)
@@ -58,7 +58,7 @@ for quizNum in range(5):
     quizFile.write(' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
     quizFile.write('\n')
 
-answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
+  answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
     
 
 quizFile.close()
