@@ -5,8 +5,8 @@
 
 
 
-os.makedirs("./answers", exist_ok=True)
-os.makedirs("./quizzes", exist_ok=True)
+os.makedirs("./answers", exist_ok= True)
+os.makedirs("./quizzes", exist_ok= True)
 
 # The quiz data. Keys are states and values are their capitals.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
